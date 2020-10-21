@@ -7,5 +7,52 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .app-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.app-content {
+  position: relative;
+  padding: 2rem;
+  width: 100%;
+  max-width: 30rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.messages {
+  overflow: auto;
+}
+
+.messages:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.message {
+  clear: both;
+}
+
+.my-message {
+  float: right;
+}
+
+.controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+}
+
+.controls input {
+  width: 50%;
 }
