@@ -41,7 +41,7 @@ function App() {
   return (
     <div className="app-wrap">
       <div className="app-content">
-        <h1 className="chat-title">Chat Room</h1>
+        <marquee><h1>Super Slick Chat Room</h1></marquee>
         <div className="messages">
           {messages.map((message, i) => {
             const myMessage = message.name === name;
@@ -54,7 +54,7 @@ function App() {
         </div>
         <div className="controls">
           <input placeholder="Your name..." type="text" value={name} onChange={(e) => setName(e.target.value)}/>
-          <input placeholder="Your message..." type="text" onKeyDown={handleTextKeyDown}/>
+          <input placeholder="Say something..." type="text" onKeyDown={handleTextKeyDown}/>
         </div>
       </div>
     </div>

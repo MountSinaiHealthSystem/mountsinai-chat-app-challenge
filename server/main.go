@@ -17,7 +17,14 @@ type JsonResponse struct {
 	Data interface{} `json:"data"`
 }
 
-var messages []*Message
+var firstMessage = Message{
+	Name: ">",
+	Text: "W̸a̷k̴e̷ ̷u̶p̴ ̷N̷e̵ò̷̷̦",
+}
+
+var messages = []*Message{
+	&firstMessage,
+}
 
 func sendJSON(w http.ResponseWriter, status int, data interface{}) {
 	js := &JsonResponse{Data: data}
