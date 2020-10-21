@@ -9,12 +9,12 @@ import (
 )
 
 type Message struct {
-	Name   string
-	Text  string
+	Name   string `json:"name"`
+	Text  string `json:"text"`
 }
 
 type JsonResponse struct {
-	Data interface{}
+	Data interface{} `json:"data"`
 }
 
 var messages []*Message
@@ -33,8 +33,9 @@ func GetMessages(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
 
 func CreateMessage(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
 	var message Message
-
 	json.NewDecoder(r.Body).Decode(&message)
+	messages = append(messages, &message)
+
 	sendJSON(w, http.StatusOK, &message)
 }
 
