@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 function App() {
-  const [name, setName] = useState('Guest User');
+  const [name, setName] = useState(`Guest User ${Math.floor(Math.random() * 1000)}`);
   const [messages, setMessages] = useState([]);
 
   async function getMessages() {
