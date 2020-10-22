@@ -51,8 +51,9 @@ body {
   left: 0;
   right: 0;
   padding: 1rem;
+  display: flex;
 }
 
 .controls input {
-  width: 50%;
+  flex-grow: 1;
 }

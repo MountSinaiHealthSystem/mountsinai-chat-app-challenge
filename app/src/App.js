@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 function App() {
   const [name, setName] = useState(`Guest User ${Math.floor(Math.random() * 1000)}`);
+  const [text, setText] = useState('');
   const [messages, setMessages] = useState([]);
 
   async function getMessages() {
@@ -10,14 +11,18 @@ function App() {
     setMessages(parsedResponse.data || []);
   }
 
-  async function createMessage(message) {
+  async function sendMessage(message) {
     await fetch('/api/createMessage', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(message),
+      body: JSON.stringify({
+        name,
+        text,
+      }),
     });
+    setText('');
     await getMessages();
   }
 
@@ -31,10 +36,7 @@ function App() {
 
   function handleTextKeyDown (e) {
     if (e.key === 'Enter') {
-      createMessage({
-        name,
-        text: e.target.value,
-      });
+      sendMessage();
     }
   }
 
@@ -54,7 +56,8 @@ function App() {
         </div>
         <div className="controls">
           <input placeholder="Your name..." type="text" value={name} onChange={(e) => setName(e.target.value)}/>
-          <input placeholder="Say something..." type="text" onKeyDown={handleTextKeyDown}/>
+          <input placeholder="Say something..." type="text" value={text} onChange={(e) => setText(e.target.value)} onKeyDown={handleTextKeyDown}/>
+          <button onClick={sendMessage}>Send</button>
         </div>
       </div>
     </div>
