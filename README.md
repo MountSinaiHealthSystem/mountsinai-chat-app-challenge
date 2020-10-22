@@ -4,13 +4,16 @@ In this challenge, we present you with a chat application that may or may not be
 
 We'd like you to do your best to make this an application ready to face the world, both in it's user-facing experience as well as it's functionality behind the scenes.
 
+If you are applying to a full-stack role please approach this challenge in a wholistic way, but if you are applying to a frontend or backend specific role you can focus your work on those aspects of the application respectively.
+
 ***Hint:***
 After some *extensive* user research we've found that the vast majority of users expect a chat application to have separate chat-rooms, and some users really like being able to see who's typing.
 
 **There's only one rule:**  
 The application must use a `React` frontend and a `Golang` backend.
+(In case you don't have extensive experience with either of these, rest assured we focus our evaluation on general coding/implementation principles and wont focus on language/framework specific usage details)
 
-**Feel free and encouraged to:**  
+**Feel free and you are encouraged to:**  
 - Refactor anything you want to make the application a better experience. Add/delete packages and code, go wild with styling, the world is your oyster.
 
 - Add any additional features you think would be cool.
