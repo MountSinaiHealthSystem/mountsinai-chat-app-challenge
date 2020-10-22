@@ -18,8 +18,8 @@ type JsonResponse struct {
 }
 
 var firstMessage = Message{
-	Name: ">",
-	Text: "W̸a̷k̴e̷ ̷u̶p̴ ̷N̷e̵ò̷̷̦",
+	Name: "",
+	Text: "Ẃ̵̡̘̓̄̅̾̕â̸̰̭̥͒͛k̴̻̔́̀e̷̡̹̣̼͚͋̌ ̶̛̛̤̖̘̗͔̯̼͂͌̽̆u̸̩̫̞̓p̷̘͈̔̂̀͗̋͝ ̸̢̲̰̖̞͔͂N̶̰̲̫̔̿̍ė̴͉͕ò̷̩͌͠",
 }
 
 var messages = []*Message{

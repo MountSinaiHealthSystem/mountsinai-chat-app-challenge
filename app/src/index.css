@@ -31,20 +31,16 @@ body {
 
 .messages {
   overflow: auto;
-}
-
-.messages:after {
-  content: '';
-  display: table;
-  clear: both;
+  display: flex;
+  flex-direction: column;
 }
 
 .message {
-  clear: both;
+  align-self: flex-start;
 }
 
 .my-message {
-  float: right;
+  align-self: flex-end;
 }
 
 .controls {
