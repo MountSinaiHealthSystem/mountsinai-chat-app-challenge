@@ -8,6 +8,10 @@ import (
 	"github.com/julienschmidt/httprouter"
 )
 
+type Logger struct {
+  handler http.Handler
+}
+
 type Message struct {
 	Name   string `json:"name"`
 	Text  string `json:"text"`
@@ -46,11 +50,16 @@ func CreateMessage(w http.ResponseWriter, r *http.Request, _ httprouter.Params) 
 	sendJSON(w, http.StatusOK, &message)
 }
 
+func (l *Logger) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+  log.Println(r.Method, r.URL.Path)
+  l.handler.ServeHTTP(w, r)
+}
+
 func main() {
     router := httprouter.New()
 
     router.GET("/api/getMessages", GetMessages)
     router.POST("/api/createMessage", CreateMessage)
 
-    log.Fatal(http.ListenAndServe(":8080", router))
+    log.Fatal(http.ListenAndServe(":8080", &Logger{ handler: router }))
 }
