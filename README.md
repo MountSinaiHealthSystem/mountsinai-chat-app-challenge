@@ -28,15 +28,6 @@ The application must use a `React` frontend and a `Golang` backend.
 3. Swan dive into that code!
 
 
-## Submitting Your Solution
-
-Simply send an email to the person who sent you this challenge with a link to your forked repository.
-
-If there are any additional installation/running steps we need to know about please add them to this file.
-
-Also feel free to list the new features we should check out if you don't think they would be immediately obvious.
-
-
 ## Running the Chat Server
 
 In the `/server` directory, you can run:
@@ -66,3 +57,17 @@ Launches the test runner in the interactive watch mode.
 ### `yarn build`
 
 Builds the app for production to the `build` folder.
+
+
+## Submitting Your Solution
+
+Simply send an email to the person who sent you this challenge with a link to your forked repository.
+
+If there are any additional installation/running steps we need to know about please add them to the `My Submission Details` section at the end of this file.
+
+Also feel free to list the new features we should check out if you don't think they would be immediately obvious.
+
+
+## My Submission Details
+
+*Submission details go here*
