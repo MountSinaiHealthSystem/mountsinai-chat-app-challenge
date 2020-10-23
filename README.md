@@ -10,7 +10,7 @@ If you are applying to a **full-stack** role please approach this challenge in a
 After some *extensive* user research we've found many users expect a chat application to have separate chat-rooms, and some users really like being able to see who's typing.
 
 **There's only one rule:**  
-The application must use a `React` frontend and a `Golang` backend.
+The application must use a [React](https://reactjs.org/) frontend and a [Golang](https://golang.org/) backend.
 (In case you don't have extensive experience with either of these, rest assured we focus our evaluation on general coding/implementation principles and wont focus on language/framework specific usage details)
 
 **Feel free and you are encouraged to:**  
@@ -24,7 +24,7 @@ The application must use a `React` frontend and a `Golang` backend.
 ## Getting Started
 
 1. Fork this repository.
-2. install `Golang`, `Node`, and `Yarn` if you don't have them on your system.
+2. install `Golang`, `Node/NPM`, and `Yarn` if you don't have them on your system.
 3. Swan dive into that code!
 
 
