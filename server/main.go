@@ -2,11 +2,14 @@ package main
 
 import (
 	"encoding/json"
+	"fmt"
 	"log"
 	"net/http"
 
 	"github.com/julienschmidt/httprouter"
 )
+
+const Port = "8080"
 
 type Logger struct {
   handler http.Handler
@@ -61,5 +64,6 @@ func main() {
     router.GET("/api/getMessages", GetMessages)
     router.POST("/api/createMessage", CreateMessage)
 
-    log.Fatal(http.ListenAndServe(":8080", &Logger{ handler: router }))
+    log.Printf("Listening on port %s", Port)
+    log.Fatal(http.ListenAndServe(fmt.Sprintf(":%s", Port), &Logger{ handler: router }))
 }
